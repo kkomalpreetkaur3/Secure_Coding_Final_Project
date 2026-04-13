@@ -53,7 +53,7 @@ function displayResults(data) {
 
 // Function to handle search
 function handleSearch() {
-    const treeName = treeInput.value.trim();
+    const treeName = sanitizeInput(treeInput.value);
     if (treeName) fetchTrees(treeName);
     else resultsDiv.innerHTML = "<p>Please enter a tree name to search.</p>";
 }
